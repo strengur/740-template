@@ -4,16 +4,20 @@
 	</div>
 
 	<div class="menu-items button-green">
-		<ul>
+		<?php wp_nav_menu( array('menu' => 'DesktopMenu')); ?>
+		<!-- <ul>
 			<li><a href="http://740.is">Heim</a></li>
 			<li><a href="http://740.is/verkefni/">Verkefni</a></li>
 			<li><a href="http://740.is/#umokkur">Um 740</a></li>
 			<li id="display-contact-form"><a href="http://740.is/hafa-samband">Hafa samband</a></li>
-			</ul>
+			</ul> -->
 	</div>
 
 	<div class="mobile">
-		<a href="<?php home_url(); ?>"><img src="<?php bloginfo('template_directory');?>/images/icons/menu.svg" alt="Snjalltækja hnappur"></a>
+		<img src="<?php bloginfo('template_directory');?>/images/icons/menu.svg" alt="Snjalltækja hnappur">
+	</div>
+	<div class="mobile-menu-items button-green hide-mobile-menu">
+		<?php wp_nav_menu( array('menu' => 'MobileMenu')); ?>
 	</div>
 
 </nav>

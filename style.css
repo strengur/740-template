@@ -142,17 +142,19 @@ section {
 	z-index: -1;
 }
 
-.menu-items,
-.menu-items a {
+.menu-items a,
+.mobile-menu-items a {
 	color: #fff;
 	padding-top: 7px;
 }
 
-.menu-items a {
+.menu-items a,
+.mobile-menu-items a {
 	text-decoration: none;
 }
 
-.menu-items>ul {
+.menu-items>ul,
+.mobile-menu-items>ul {
 	margin-right: 15px;
 }
 
@@ -586,7 +588,7 @@ div.wpcf7-mail-sent-ng {
 
 	.logo {
 		height: 72px;
-}
+	}
 
 	.mobile {
 		display: inline;
@@ -597,15 +599,46 @@ div.wpcf7-mail-sent-ng {
 		height: 72px;
 	}
 
-	.mobile img {
-		width: 45px;
-		position: fixed;
-		right: 17px;
-		top: 13px;
+	.mobile img:hover {
+		cursor: pointer;
+	}
 
+	.mobile img {
+		width: 30px;
+		position: fixed;
+		right: 20px;
+		top: 20px;
+		transition: .5s;
+	}
+
+	.mobile-image-rotate {
+		transform: rotate(-45deg);
+		transition: .5s;
+	}
+
+	.mobile-menu-items {
+		position: absolute;
+		right: 0;
+		top: 70px;
+	}
+
+	.mobile-menu-items ul {
+		width: 200px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		list-style: none;
+	}
+
+	.mobile-menu-items li {
+		flex: 1 40px;
+	}
+
+	.hide-mobile-menu {
+		display: none;
 	}
 }
-
 
 @media screen and (max-width: 320px) {
 
@@ -626,8 +659,4 @@ div.wpcf7-mail-sent-ng {
 	h4 {
 		font-size: 1.25em;
 	}
-}
-
-@media screen and (min-width: 321px) {
-
 }

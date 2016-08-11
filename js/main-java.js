@@ -24,28 +24,7 @@ function basedOnWindowScrolling () {
 	}
 }
 
-
-// Make "Welcom message" disappear and contact form appear at same time
-
-// $("#display-contact-form").click(function() {
-// 	$(".landing-welcome").fadeOut(1500);
-// 	$(".landing-contact").fadeIn(1500);
-// });
-
-// Function to move up/down the page more smoothlie
-/*
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+$('.mobile img').click(function() {
+	$('.hide-mobile-menu').slideToggle(500, 'swing');
+	$('.mobile img').toggleClass('mobile-image-rotate');
 });
-*/
