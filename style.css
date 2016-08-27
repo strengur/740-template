@@ -529,6 +529,10 @@ div.wpcf7-mail-sent-ng {
 		width: 494px;
 	}
 
+	.mobile-menu-items {
+		display: none;
+	}
+
 	input.wpcf7-form-control.wpcf7-date.wpcf7-validates-as-date {
 		width: 221px;
 	}
