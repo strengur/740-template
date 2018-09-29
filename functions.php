@@ -26,6 +26,12 @@ function theme_styles() {
 
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
+function wpb_adding_scripts() {
+	wp_enqueue_script( 'custom-app-script', get_template_directory_uri() . '/js/main-java.js', array('jquery'), '1.0.0', true);
+	wp_enqueue_script('custom-app-script');
+}
+add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' );
+
 /***** EXCERPT FOR LEFT AND RIGT COLUMNS ON FRONTPAGE *****/
 function the_excerpt_max_charlength($charlength) {
 	$excerpt = get_the_excerpt();
