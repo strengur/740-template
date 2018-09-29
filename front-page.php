@@ -113,7 +113,7 @@
 					$args = array('category_name' => 'verkefni', 'posts_per_page' => 1, 'offset' => 1);
 					$query = new WP_Query( $args );
 
-					$secondPhoto = array( 'post_type' => 'attachment', 'posts_per_page' => 1, 'offset' => 2, 'post_status' =>'any' );
+					$secondPhoto = array( 'post_type' => 'attachment', 'posts_per_page' => 1, 'offset' => 1, 'post_status' =>'any' );
 					$secondAttachments = get_posts( $secondPhoto );
 
 					if ( $secondAttachments ) {
@@ -152,7 +152,7 @@
 					}
 				?>
 			</div>
-
+			<div class="button-green button-see-all"><a href="<?php bloginfo('url'); ?>/verkefni">Sjá fleiri verkefni</a></div>
 		</section>
 
 		<section class="image-gap image-1" id="umokkur">
